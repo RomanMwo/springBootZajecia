@@ -66,5 +66,11 @@ public Iterable<SchoolClass> getSchoolsClasses() {
 		
 		return schoolClasses;
 	}
+
+public void addSchoolClass(SchoolClass schoolCLass) {
+	Transaction transaction = session.beginTransaction();
+	session.save(schoolCLass);
+	transaction.commit();
+}
 	
 }
